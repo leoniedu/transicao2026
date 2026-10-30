@@ -36,10 +36,10 @@ p <- ggplot(d, aes(x = liq, y = fonte, fill = finalista)) +
                      limits = c(-2.4, 19.5), breaks = seq(0, 15, 5), expand = c(0, 0)) +
   coord_cartesian(clip = "off") +
   labs(y = NULL,
-       title = "Quem governa atrai mais quem não tinha escolhido candidato no 1º turno",
+       title = "Em 2026, a vantagem do governo entre quem não tinha escolhido candidato foi de três a seis vezes a de 2014 e 2022",
        subtitle = paste0("De onde veio o ganho de votos de cada finalista do 1º para o 2º turno, nos três segundos turnos com o presidente ",
-                         "candidato à reeleição.\nO governo levou o canal de mobilização nos três anos. Em 2014, a migração dos eleitores de ",
-                         "Marina para Aécio pesou mais."),
+                         "candidato à reeleição.\nEntre quem não tinha escolhido candidato, Lula teve +6,2 milhões contra +0,5 de Flávio. ",
+                         "Os eleitores dos outros candidatos se dividiram ao meio."),
        caption = paste0("Inferência ecológica (tslphom, uma matriz por zona eleitoral, seções como unidades), dados do TSE. ",
                         "Saldos líquidos estimados, não comportamento individual.\n",
                         "Exclui exterior, voto em trânsito e seções com eleitorado diferente entre os turnos (>1%). ",
