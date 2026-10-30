@@ -1,0 +1,59 @@
+spec A: 2640 zonas fitted in 24.5031 mins
+  lphom: max |row margin error| 1.92e-06, max |col margin error| 7.11e-07 votes
+  tslphom: max |row margin error| 1.31e-10, max |col margin error| 8.29e-10 votes
+  nslphom: max |row margin error| 1.31e-10, max |col margin error| 1.46e-10 votes
+
+national row-standardised transitions (%), seção units within zona:
+
+-- spec A, lphom
+           col
+row         abstencao flavio invalido lula
+  abstencao      82.8    3.8      1.1 12.3
+  flavio          1.6   97.0      0.6  0.8
+  invalido        4.3    8.3     33.7 53.7
+  lula            1.2    0.2      0.4 98.2
+  outros          9.6   38.3     13.4 38.7
+
+-- spec A, tslphom
+           col
+row         abstencao flavio invalido lula
+  abstencao      81.0    4.9      1.1 13.0
+  flavio          2.1   95.5      0.8  1.6
+  invalido        4.5    8.6     32.6 54.3
+  lula            1.7    0.9      0.6 96.7
+  outros         10.0   38.9     11.7 39.4
+
+-- spec A, nslphom
+           col
+row         abstencao flavio invalido lula
+  abstencao      75.9    7.9      0.8 15.4
+  flavio          3.6   90.9      1.4  4.1
+  invalido        5.3    9.7     28.6 56.3
+  lula            3.1    3.4      1.3 92.2
+  outros         10.9   40.5      7.3 41.3
+
+national Duncan-Davis bounds (%):
+      spec       row       col    lo    hi
+    <char>    <char>    <char> <num> <num>
+ 1:      A      lula      lula   9.8  99.9
+ 2:      A      lula    flavio   0.0  73.4
+ 3:      A      lula  invalido   0.0   7.7
+ 4:      A      lula abstencao   0.0  53.7
+ 5:      A    flavio      lula   0.0  77.8
+ 6:      A    flavio    flavio   5.1  99.3
+ 7:      A    flavio  invalido   0.0   7.4
+ 8:      A    flavio abstencao   0.0  51.3
+ 9:      A    outros      lula   0.0 100.0
+10:      A    outros    flavio   0.0 100.0
+11:      A    outros  invalido   0.0  43.1
+12:      A    outros abstencao   0.0  99.8
+13:      A  invalido      lula   0.0 100.0
+14:      A  invalido    flavio   0.0  99.9
+15:      A  invalido  invalido   0.0  65.3
+16:      A  invalido abstencao   0.0 100.0
+17:      A abstencao      lula   0.0  98.2
+18:      A abstencao    flavio   0.0  95.2
+19:      A abstencao  invalido   0.0  12.6
+20:      A abstencao abstencao   0.0  89.1
+      spec       row       col    lo    hi
+    <char>    <char>    <char> <num> <num>

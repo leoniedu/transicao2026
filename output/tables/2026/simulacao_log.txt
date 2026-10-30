@@ -1,0 +1,43 @@
+failed runs:
+Empty data.table (0 rows and 3 cols): method,uf,N
+
+mean absolute error (pp) by method x scenario, all cells / small rows (outros, invalido) / big rows:
+      scenario               method mae_all mae_small mae_big max_abs  secs
+        <char>               <char>   <num>     <num>   <num>   <num> <num>
+ 1:  secao_iid           lphom_zona    1.47      2.91    0.52   10.76  2.22
+ 2:  secao_iid         tslphom_zona    1.53      2.82    0.68   10.39  4.91
+ 3:  secao_iid           tslphom_uf    1.80      3.56    0.62   18.67 22.58
+ 4:  secao_iid             lphom_uf    1.84      3.77    0.56   19.04 26.90
+ 5:  secao_iid         nslphom_zona    2.90      4.43    1.88   12.33 23.07
+ 6:  secao_iid           nslphom_uf    3.10      5.16    1.72   19.57 37.05
+ 7:  secao_iid    lphom_uf_mununits    5.85     11.88    1.82   44.01  0.01
+ 8:  secao_iid tslphom_uf_zonaunits    6.61     13.38    2.10   62.10  0.01
+ 9:  secao_iid     ecolRxC_ipf_zona   10.48      9.92   10.86   37.03  5.53
+10:  secao_iid       ecolRxC_ipf_uf   11.09     13.28    9.62   42.88  5.34
+11: zona_drift           lphom_zona    1.57      3.16    0.51   14.76  1.97
+12: zona_drift         tslphom_zona    1.72      3.27    0.68   15.11  4.21
+13: zona_drift         nslphom_zona    2.95      4.79    1.73   16.15 20.85
+14: zona_drift           tslphom_uf    5.16     10.02    1.92   45.25 19.87
+15: zona_drift             lphom_uf    5.39     10.25    2.16   45.25 20.40
+16: zona_drift           nslphom_uf    6.27     11.37    2.88   45.25 34.47
+17: zona_drift     ecolRxC_ipf_zona    9.88      9.86    9.90   38.66  5.38
+18: zona_drift       ecolRxC_ipf_uf   11.93     14.42   10.27   45.71  5.21
+19: zona_drift    lphom_uf_mununits   13.07     23.70    5.99   83.56  0.01
+20: zona_drift tslphom_uf_zonaunits   15.42     27.69    7.24   83.50  0.01
+      scenario               method mae_all mae_small mae_big max_abs  secs
+        <char>               <char>   <num>     <num>   <num>   <num> <num>
+
+mean absolute error by row (pp), zona_drift scenario:
+Key: <method>
+                  method abstencao flavio invalido  lula outros
+                  <char>     <num>  <num>    <num> <num>  <num>
+ 1:       ecolRxC_ipf_uf      18.9    7.1     16.7   4.9   12.2
+ 2:     ecolRxC_ipf_zona      16.3    6.9     15.3   6.5    4.4
+ 3:             lphom_uf       3.2    1.4      7.8   1.9   12.7
+ 4:    lphom_uf_mununits       8.6    3.7     27.9   5.7   19.5
+ 5:           lphom_zona       0.7    0.3      4.0   0.5    2.4
+ 6:           nslphom_uf       3.0    2.6      9.8   3.0   13.0
+ 7:         nslphom_zona       1.4    1.5      6.4   2.2    3.2
+ 8:           tslphom_uf       2.8    1.3      7.4   1.7   12.6
+ 9: tslphom_uf_zonaunits      11.8    4.1     31.5   5.8   23.9
+10:         tslphom_zona       0.7    0.5      4.1   0.8    2.5

@@ -1,0 +1,8 @@
+motivo,secoes,aptos_t1,comparecimento_t1,comparecimento_t2
+all seções,472075,156454011,123682372,124252796
+exterior (ZZ),1064,695355,304032,310148
+"voto em trânsito (CD_TIPO_LOCAL = 2, either round)",114,38381,35596,32876
+seção anulada (either round),0,0,0,0
+no votes recorded in a round (comparecimento = 0),1,84,0,0
+not present in both rounds,0,0,0,0
+QT_APTOS differs between rounds by more than 1%,1942,646427,524420,516002

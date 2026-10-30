@@ -1,0 +1,92 @@
+
+==== 2014, lphom (per-zona LP), national ====
+
+dilma - OUT: where round-1 voters went (%)
+   contraparte    votos   pct
+        <char>    <num> <num>
+1:       dilma 40672472  94.1
+2:       aecio   413579   1.0
+3:    invalido   663930   1.5
+4:   abstencao  1478566   3.4
+dilma - IN: origin of round-2 votes (%)
+   contraparte    votos   pct
+        <char>    <num> <num>
+1:       dilma 40672472  74.7
+2:       aecio   639391   1.2
+3:      outros  7866391  14.4
+4:    invalido  4550872   8.4
+5:   abstencao   721621   1.3
+
+aecio - OUT: where round-1 voters went (%)
+   contraparte    votos   pct
+        <char>    <num> <num>
+1:       dilma   639391   1.8
+2:       aecio 33266785  95.6
+3:    invalido   265454   0.8
+4:   abstencao   618036   1.8
+aecio - IN: origin of round-2 votes (%)
+   contraparte    votos   pct
+        <char>    <num> <num>
+1:       dilma   413579   0.8
+2:       aecio 33266785  65.4
+3:      outros 13952507  27.4
+4:    invalido  1860374   3.7
+5:   abstencao  1393153   2.7
+
+net change decomposition (votes):
+   finalista contraparte    ganho   perda  liquido delta_obs
+      <char>      <char>    <num>   <num>    <num>     <num>
+1:     dilma       aecio   639391  413579   225812  11222200
+2:     dilma      outros  7866391       0  7866391  11222200
+3:     dilma    invalido  4550872  663930  3886942  11222200
+4:     dilma   abstencao   721621 1478566  -756945  11222200
+5:     aecio       dilma   413579  639391  -225812  16096731
+6:     aecio      outros 13952507       0 13952507  16096731
+7:     aecio    invalido  1860374  265454  1594920  16096731
+8:     aecio   abstencao  1393153  618036   775116  16096731
+
+==== 2014, tslphom (per-zona LP), national ====
+
+dilma - OUT: where round-1 voters went (%)
+   contraparte    votos   pct
+        <char>    <num> <num>
+1:       dilma 40060137  92.7
+2:       aecio   900474   2.1
+3:    invalido   744587   1.7
+4:   abstencao  1523349   3.5
+dilma - IN: origin of round-2 votes (%)
+   contraparte    votos   pct
+        <char>    <num> <num>
+1:       dilma 40060137  73.6
+2:       aecio   970591   1.8
+3:      outros  7953499  14.6
+4:    invalido  4583640   8.4
+5:   abstencao   882880   1.6
+
+aecio - OUT: where round-1 voters went (%)
+   contraparte    votos   pct
+        <char>    <num> <num>
+1:       dilma   970591   2.8
+2:       aecio 32684786  93.9
+3:    invalido   357328   1.0
+4:   abstencao   776961   2.2
+aecio - IN: origin of round-2 votes (%)
+   contraparte    votos   pct
+        <char>    <num> <num>
+1:       dilma   900474   1.8
+2:       aecio 32684786  64.2
+3:      outros 13938557  27.4
+4:    invalido  1869374   3.7
+5:   abstencao  1493206   2.9
+
+net change decomposition (votes):
+   finalista contraparte    ganho   perda  liquido delta_obs
+      <char>      <char>    <num>   <num>    <num>     <num>
+1:     dilma       aecio   970591  900474    70117  11222200
+2:     dilma      outros  7953499       0  7953499  11222200
+3:     dilma    invalido  4583640  744587  3839053  11222200
+4:     dilma   abstencao   882880 1523349  -640469  11222200
+5:     aecio       dilma   900474  970591   -70117  16096731
+6:     aecio      outros 13938557       0 13938557  16096731
+7:     aecio    invalido  1869374  357328  1512046  16096731
+8:     aecio   abstencao  1493206  776961   716245  16096731

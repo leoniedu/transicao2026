@@ -1,0 +1,13 @@
+uf,nr_candidato,nome_urna,partido,incumbente_exercicio,incumbente_estrito,status,alinhamento_presidencial,fonte_status,fonte_alinhamento
+AC,11,MAILZA ASSIS,PP,1,0,vice_que_assumiu,a_confirmar,https://pt.wikipedia.org/wiki/Mailza_Assis,
+AC,10,ALAN RICK,REPUBLICANOS,0,0,desafiante,a_confirmar,,
+AM,55,OMAR AZIZ,PSD,0,0,desafiante,a_confirmar,a_confirmar,
+AM,22,PROFESSORA MARIA DO CARMO,PL,0,0,desafiante,a_confirmar,a_confirmar,
+DF,11,CELINA LEÃO,PP,1,0,vice_que_assumiu,a_confirmar,https://en.wikipedia.org/wiki/2026_Federal_District_gubernatorial_election,
+DF,13,LEANDRO GRASS,PT,0,0,desafiante,a_confirmar,,
+ES,15,RICARDO FERRAÇO,MDB,1,0,vice_que_assumiu,a_confirmar,https://tribunaonline.com.br/politica/eleicoes2026/2026-es/casagrande-anuncia-renuncia-e-ricardo-ferraco-vai-assumir-o-governo-do-es-293872,
+ES,10,LORENZO PAZOLINI,REPUBLICANOS,0,0,desafiante,a_confirmar,,
+RN,13,CADU DE LULA,PT,0,0,desafiante,a_confirmar,a_confirmar,
+RN,44,ALLYSON,UNIÃO,0,0,desafiante,a_confirmar,a_confirmar,
+TO,45,VICENTINHO JÚNIOR,PSDB,0,0,desafiante,a_confirmar,a_confirmar,
+TO,44,PROFESSORA DORINHA,UNIÃO,0,0,desafiante,a_confirmar,a_confirmar,
