@@ -128,3 +128,20 @@ swing_tab <- function(e, fin) {
     d[, delta_obs := obs][]
   }))
 }
+
+# Voluntary-vote age analysis (R/14-17). Lower bound of a TSE DS_FAIXA_ETARIA label ("16 anos", "21 a 24 anos",
+# "100 anos ou mais", padded in some files); NA for "Inválido". Byte-wise, since the labels are Latin-1.
+faixa_inicio <- function(ds) suppressWarnings(as.integer(substr(ds, 1, regexpr(" ", ds, useBytes = TRUE) - 1)))
+idade3 <- function(lo) fcase(lo <= 17, "16-17", lo >= 70, "70+", !is.na(lo), "18-69")
+idade5 <- function(lo) fcase(lo <= 17, "16-17", lo <= 24, "18-24", lo <= 69, "25-69", lo <= 79, "70-79", !is.na(lo), "80+")
+ufs_br <- c("AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MG", "MS", "MT", "PA", "PB", "PE", "PI", "PR",
+            "RJ", "RN", "RO", "RR", "RS", "SC", "SE", "SP", "TO")
+fetch_raw <- function(url, dest) {
+  if (file.exists(dest)) return(invisible(dest))
+  dir.create(dirname(dest), recursive = TRUE, showWarnings = FALSE)
+  options(timeout = 7200)
+  download.file(url, tmp <- paste0(dest, ".part"), mode = "wb", quiet = TRUE)
+  assert(system2("unzip", c("-tq", shQuote(tmp)), stdout = FALSE) == 0, paste("zip integrity:", basename(dest)))
+  file.rename(tmp, dest)
+  invisible(dest)
+}
