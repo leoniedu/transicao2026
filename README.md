@@ -43,9 +43,9 @@ Rscript R/08_compare.R             # comparação entre anos
 Rscript R/fig_swing.R              # gráfico
 ```
 
-Os scripts `R/14_*` a `R/17_*` estimam o voto por faixa de idade (16–17, 18–69 e 70+) em 2022 e 2026, com a
+Os scripts `R/14_*` a `R/18_*` estimam o voto por faixa de idade (16–17, 18–69 e 70+) em 2022 e 2026, com a
 abstenção de cada faixa fixada no dado oficial do TSE por zona (`ANO` e `TURNO`; o 2º turno de 2026 é imputado a partir
-da variação de 2022). Os scripts `R/10_*` a `R/13_*` tratam dos segundos turnos para governador de 2026. A codificação de incumbência está
+da variação de 2022; `R/18_*` faz a checagem por regressão). Os scripts `R/10_*` a `R/13_*` tratam dos segundos turnos para governador de 2026. A codificação de incumbência está
 em `data/manual/gov_2026_finalistas.csv`, e o alinhamento presidencial ainda está por confirmar.
 
 Os dados brutos (`data/raw/`) e intermediários (`data/processed/`) não são versionados; os scripts os recriam.
