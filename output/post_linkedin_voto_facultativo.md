@@ -4,7 +4,7 @@
 
 Na Folha (3/11), Dora Kramer escreveu que a virada de Lula "mostrou o peso do voto facultativo" e que "os dados comprovam a adesão dos eleitores livres da obrigatoriedade do voto: jovens de 16 a 17 anos e pessoas de 70 ou mais". Os dados das seções eleitorais confirmam a primeira metade da frase (esses eleitores foram mais às urnas), mas não a conclusão: eles não decidiram a eleição.
 
-🔹 **A abstenção não caiu de 22% para 19%.** Em 2022, ela foi de 20,95% no 1º turno e 20,59% no 2º; não chegou a 22%. Em 2026, o 1º turno teve 21,08%, a maior desde 1998. A queda para 19,22% aconteceu entre os dois turnos de 2026, e foi sobretudo de eleitores de voto obrigatório: dos cerca de 3 milhões de votantes a mais no 2º turno, dois terços tinham entre 18 e 69 anos.
+🔹 **A abstenção não caiu de 22% para 19%.** Em 2022, ela foi de 20,95% no 1º turno e 20,59% no 2º; não chegou a 22%. Em 2026, o 1º turno teve 21,08%, a maior desde 1998. A queda para 19,22% aconteceu entre os dois turnos de 2026, O TSE ainda não divulgou o comparecimento por idade no 2º turno, mas, pelas nossas estimativas, dos cerca de 3 milhões de votantes a mais, dois terços tinham entre 18 e 69 anos, ou seja, voto obrigatório.
 
 🔹 **Os idosos de fato votaram mais, mas se dividiram.** A abstenção acima de 70 anos caiu de 59% no 1º turno de 2022 para 49% no 1º turno de 2026 (dado oficial do TSE). Foram 8,6 milhões de votantes, contra 6,0 milhões em 2022. Esse grupo pende para a direita: o saldo de Flávio entre eles foi de 0,8 milhão de votos, no 1º e no 2º turno.
 
