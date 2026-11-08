@@ -54,5 +54,10 @@ presidencial (PL, PT, outros, branco e nulo), a relação entre escolaridade e v
 referência do mesmo dia), os votos só na legenda para deputado e a composição do eleitorado que dá votos válidos.
 Usam os arquivos de votação por seção de cada UF, em `data/raw/<ano>/gov/`.
 
+`R/24_rdv_validacao.R` usa o Registro Digital do Voto (RDV) de uma amostra aleatória de seções (Bahia, 2026), baixado com
+`py/rdv_fetch.py` e lido com `py/rdv_parse.py` e `py/rdv_secao.py`: o que foi digitado nos votos nulos para senador e se
+o voto só na legenda para deputado acompanha os nulos do tipo "número do partido + dígito". `R/25_rd1998.R` compara
+cédula de papel e urna eletrônica em 1998 (descontinuidade em 40.500 eleitores, como em Fujiwara, 2015), por cargo.
+
 Os dados brutos (`data/raw/`) e intermediários (`data/processed/`) não são versionados; os scripts os recriam.
 As tabelas finais estão em `output/tables/` e o plano de trabalho em `PLAN.md`.
