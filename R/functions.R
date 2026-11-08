@@ -145,3 +145,17 @@ fetch_raw <- function(url, dest) {
   file.rename(tmp, dest)
   invisible(dest)
 }
+
+# Weighted OLS with one set of fixed effects (`cl`, also the cluster for CR1 standard errors), by within-transformation.
+fe_ols <- function(dt, y, x, cl = "zona", w = "aptos") {
+  cols <- c(y, x)
+  wv <- dt[[w]]; mu <- dt[, lapply(.SD, function(v) sum(v * wv[.I]) / sum(wv[.I])), by = cl, .SDcols = cols]
+  m <- as.matrix(dt[, ..cols]) - as.matrix(mu[match(dt[[cl]], mu[[cl]]), ..cols])
+  X <- m[, x, drop = FALSE]; Y <- m[, y]; W <- dt[[w]]
+  XtWX <- crossprod(X * W, X); b <- solve(XtWX, crossprod(X * W, Y))[, 1]
+  e <- Y - X %*% b
+  S <- rowsum(X * as.vector(W * e), dt[[cl]])
+  G <- nrow(S); n <- nrow(X); k <- ncol(X) + uniqueN(dt[[cl]])
+  V <- solve(XtWX) %*% crossprod(S) %*% solve(XtWX) * G / (G - 1) * (n - 1) / (n - k)
+  data.table(termo = x, coef = b, se = sqrt(diag(V)))
+}

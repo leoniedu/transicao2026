@@ -48,5 +48,11 @@ abstenção de cada faixa fixada no dado oficial do TSE por zona (`ANO` e `TURNO
 da variação de 2022; `R/18_*` faz a checagem por regressão). Os scripts `R/10_*` a `R/13_*` tratam dos segundos turnos para governador de 2026. A codificação de incumbência está
 em `data/manual/gov_2026_finalistas.csv`, e o alinhamento presidencial ainda está por confirmar.
 
+Os scripts `R/19_*` a `R/23_*` cruzam, no 1º turno de 2022 e 2026, o voto para presidente com o voto para senador
+(`CARGO=5`; duas vagas em 2026) e para deputado federal (`CARGO=6`): para onde foram os votos de cada eleitorado
+presidencial (PL, PT, outros, branco e nulo), a relação entre escolaridade e votos nulos (com o voto para presidente como
+referência do mesmo dia), os votos só na legenda para deputado e a composição do eleitorado que dá votos válidos.
+Usam os arquivos de votação por seção de cada UF, em `data/raw/<ano>/gov/`.
+
 Os dados brutos (`data/raw/`) e intermediários (`data/processed/`) não são versionados; os scripts os recriam.
 As tabelas finais estão em `output/tables/` e o plano de trabalho em `PLAN.md`.

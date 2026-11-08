@@ -3,18 +3,6 @@
 # for the round-1 level. Under fairly general conditions the two bracket the effect (Angrist & Pischke 2009, 5.4).
 # votos_m = coef x group size: change relative to the group behaving like 18-69, in millions.
 source(here::here("R", "functions.R"))
-fe_ols <- function(dt, y, x, cl = "zona", w = "aptos") {
-  cols <- c(y, x)
-  wv <- dt[[w]]; mu <- dt[, lapply(.SD, function(v) sum(v * wv[.I]) / sum(wv[.I])), by = cl, .SDcols = cols]
-  m <- as.matrix(dt[, ..cols]) - as.matrix(mu[match(dt[[cl]], mu[[cl]]), ..cols])
-  X <- m[, x, drop = FALSE]; Y <- m[, y]; W <- dt[[w]]
-  XtWX <- crossprod(X * W, X); b <- solve(XtWX, crossprod(X * W, Y))[, 1]
-  e <- Y - X %*% b
-  S <- rowsum(X * as.vector(W * e), dt[[cl]])
-  G <- nrow(S); n <- nrow(X); k <- ncol(X) + uniqueN(dt[[cl]])
-  V <- solve(XtWX) %*% crossprod(S) %*% solve(XtWX) * G / (G - 1) * (n - 1) / (n - k)
-  data.table(termo = x, coef = b, se = sqrt(diag(V)))
-}
 run_year <- function(yr) {
   p <- function(n) as.data.table(read_parquet(here::here("data", "processed", yr, paste0(n, ".parquet"))))
   t1 <- p("secao_t1"); t2 <- p("secao_t2"); pf <- p("perfil_idade_secao")

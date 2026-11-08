@@ -25,7 +25,12 @@ raca_grupo <- function(ds) {
 
 read_uf <- function(uf) {
   zip <- raw_dir("perfil", sprintf("perfil_eleitor_secao_%d_%s.zip", ano, uf))
-  p <- read_tse_zip(zip, sprintf("perfil_eleitor_secao_%d_%s.csv", ano, uf), cols, cargo = NULL)
+  member <- sprintf("perfil_eleitor_secao_%d_%s.csv", ano, uf)
+  hdr <- zip_header(zip, member)
+  qt <- intersect(c("QT_ELEITORES", "QT_ELEITORES_PERFIL"), hdr)[1]  # 2022 files: QT_ELEITORES_PERFIL
+  p <- read_tse_zip(zip, member, c(intersect(setdiff(cols, "QT_ELEITORES"), hdr), qt), cargo = NULL)
+  setnames(p, qt, "QT_ELEITORES")
+  if (!"DS_RACA_COR" %in% names(p)) p[, DS_RACA_COR := NA_character_]  # absent from the 2022 DF file
   p[, secao_id := secao_pack(CD_MUNICIPIO, NR_ZONA, NR_SECAO)]
   p[, `:=`(sexo = fcase(DS_GENERO == "FEMININO", "fem", DS_GENERO == "MASCULINO", "masc", default = "nao_informado"),
            idade = as.character(idade_grupo(DS_FAIXA_ETARIA)),
